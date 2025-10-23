@@ -3,7 +3,7 @@
 
 import { Card, Button, Image } from "@heroui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {  SiTailwindcss, SiTypescript } from "react-icons/si";
 
 type Project = {
   id: string;
