@@ -4,7 +4,7 @@ import AboutPage from "../About";
 import ProjectsPage from "../Project";
 import SkillsSection from "../Skills";
 // import Contactpage from "../Contact";
-// import EducationSection from "../Education";
+import EducationSection from "../Education";
 
 export default function HomePage() {
   return (
@@ -81,7 +81,7 @@ export default function HomePage() {
           <AboutPage />
           <ProjectsPage />
           <SkillsSection />
-          {/* <EducationSection/> */}
+          <EducationSection/>
           {/* <Contactpage /> */}
       </div>
     </div>
