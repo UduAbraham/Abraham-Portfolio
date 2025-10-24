@@ -38,7 +38,7 @@ export default function EducationSection() {
           Education
         </h2>
 
-        <div className="flex flex-cols-[auto_1fr] gap-x-6 py-6 relative">
+        <div className="grid grid-cols-[auto_1fr] gap-x-6 py-6 relative">
           {educationData.map((edu, index) => (
             <div key={index} className="contents">
               {/* Timeline Icon + Line */}

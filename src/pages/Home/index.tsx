@@ -1,20 +1,25 @@
 import { Button, Image } from "@heroui/react";
-import { FaReact } from "react-icons/fa";
+// import { FaReact } from "react-icons/fa";
+
 import AboutPage from "../About";
 import ProjectsPage from "../Project";
 import SkillsSection from "../Skills";
-// import Contactpage from "../Contact";
 import EducationSection from "../Education";
+// import TechStack from "../Technologies";
+import Contactpage from "../Contact";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen  bg-[#0f1c23] text-white font-display">
+    <div className="min-h-screen bg-[#0f1c23] text-white font-display">
       <div className="mx-auto space-y-10">
         {/* Header */}
         <header className="flex items-center justify-between border-b border-[#27343a] px-4 sm:px-6 py-4 sticky top-0 bg-[#0f1c23]/80 backdrop-blur-md z-50">
           <div className="flex items-center gap-3">
             <div className="bg-primary rounded-full w-8 h-8 flex items-center justify-center">
-              <FaReact className="text-[#0f1c23]" size={18} />
+              {/* {React.createElement(FaReact, {
+                className: "text-[#0f1c23]",
+                size: 18,
+              })} */}
             </div>
             <h2 className="text-lg sm:text-xl font-bold tracking-tight">
               Udu Abraham
@@ -78,11 +83,13 @@ export default function HomePage() {
           </div>
         </main>
 
-          <AboutPage />
-          <ProjectsPage />
-          <SkillsSection />
-          <EducationSection/>
-          {/* <Contactpage /> */}
+        {/* Sections */}
+        <AboutPage />
+        <ProjectsPage />
+        <SkillsSection />
+        <EducationSection />
+        {/* <TechStack /> */}
+        <Contactpage />
       </div>
     </div>
   );
