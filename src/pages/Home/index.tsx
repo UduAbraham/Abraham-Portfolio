@@ -1,6 +1,4 @@
 import { Button, Image } from "@heroui/react";
-// import { SiElement } from "react-icons/si";
-// import { FaReact } from "react-icons/fa";
 
 import AboutPage from "../About";
 import ProjectsPage from "../Project";
@@ -11,6 +9,7 @@ import HeroSlider from "../Slider";
 import NavBar from "../Navbar";
 
 export default function HomePage() {
+
   return (
     <div className="min-h-screen bg-[#0f1c23] text-white font-display "id="Home">
       <div className="mx-auto space-y-10">
@@ -45,6 +44,7 @@ export default function HomePage() {
               <Button
                 variant="bordered"
                 className="text-white border-[#27343a] hover:bg-[#27343a] hover:text-primary transition w-full sm:w-auto"
+               as="a" href="#Contact"
               >
                 Contact Me
               </Button>

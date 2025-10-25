@@ -1,10 +1,11 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 import { Button } from "@heroui/button";
 
 export default function Contactpage() {
   return (
     <section
-      id="contact"
+      id="Contact"
       className="min-h-screen bg-background-dark text-white flex flex-col items-center justify-center px-6 md:px-20 lg:px-40 pb-10"
     >
       {/* Section Title */}
@@ -77,7 +78,7 @@ export default function Contactpage() {
             target="_blank"
             className="text-gray-400 hover:text-primary transition-colors"
           >
-            <FaTwitter size={24} />
+            <BsTwitterX size={24} />
           </a>
         </div>
       </div>

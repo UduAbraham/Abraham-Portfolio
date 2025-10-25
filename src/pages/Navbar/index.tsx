@@ -1,13 +1,15 @@
 import { SiElementary } from "react-icons/si";
-
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@heroui/react";
+import { useState } from "react";
 
 export const AcmeLogo = () => {
   return (
@@ -23,45 +25,61 @@ export const AcmeLogo = () => {
 };
 
 export default function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const menuItems = [
+    { name: "Home", href: "#Home" },
+    { name: "About", href: "#About" },
+    { name: "Projects", href: "#Project" },
+    { name: "Skills", href: "#TechStack" },
+    { name: "Contact", href: "#Contact" },
+  ];
+
   return (
-    <Navbar position="static" className="bg-[#0f1c23] py-10">
+    <Navbar
+      position="static"
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-[#0f1c23] py-10"
+    >
       <NavbarBrand className="gap-2">
         <SiElementary />
         <p className="text-lg sm:text-xl font-bold tracking-tight">Abraham</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4 hidden md:flex gap-8 mx-auto my-10 bg-[#1a2234]/40 p-5 rounded-lg" justify="center" >
-        <NavbarItem>
-          <Link color="foreground" href="#Home" className="text-white">
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#About" className="text-white" >
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem >
-          <Link aria-current="page" href="#Project" className="text-white">
-            Project
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#TechStack" className="text-white">
-            Skills
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#Contact" className="text-white">
-            Contact
-          </Link>
-        </NavbarItem>
+
+      {/* Desktop Menu */}
+      <NavbarContent
+        className="hidden md:flex gap-8 mx-auto my-10 bg-[#1a2234]/40 p-5 rounded-lg"
+        justify="center"
+      >
+        {menuItems.map((item, index) => (
+          <NavbarItem key={index}>
+            <Link href={item.href} className="text-white "
+             onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
+
+      {/* Mobile Menu Toggle Button */}
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="md:hidden text-white "
+        />
       </NavbarContent>
+
+      {/* Mobile Dropdown Menu */}
+      <NavbarMenu className="bg-gray-800">
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={index} className="">
+            <Link href={item.href} className="text-white text-lg ">
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }

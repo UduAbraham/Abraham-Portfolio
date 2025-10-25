@@ -3,7 +3,7 @@ import { FaCode } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#0f1c23] flex flex-col">
+    <div className="min-h-screen bg-[#0f1c23] flex flex-col" id="About">
       <main className="flex-1 max-w-[1060px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-12 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
         
         {/* Left Section */}
