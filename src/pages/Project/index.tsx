@@ -53,7 +53,7 @@ const  Project = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-[#0f1c23] font-display text-white">
+    <div className="min-h-screen bg-[#0f1c23] font-display text-white" id="Project">
       {/* Page container */}
       <div className="container mx-auto px-4 md:px-10 lg:px-40 ">
        
@@ -98,7 +98,7 @@ export default function ProjectsPage() {
    --------------------------- */
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="bg-[#1e1e1e] rounded-lg p-4 flex flex-col h-full transition-transform transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 ">
+    <Card className="bg-[#1e1e1e] rounded-lg p-4 flex flex-col h-full transition-transform transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 " >
       <div className="rounded-md overflow-hidden">
         <Image
           alt={project.title}

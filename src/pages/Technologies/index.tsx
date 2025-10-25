@@ -87,7 +87,7 @@ export default function TechStack() {
   ];
 
   return (
-    <div  className="min-h-screen bg-[#0f1c23] text-white font-display px-6 md:px-12 py-16">
+    <div  className="min-h-screen bg-[#0f1c23] text-white font-display px-6 md:px-12 py-16" id="TechStack">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Section Header */}
         <div>
