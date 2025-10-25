@@ -3,10 +3,10 @@ import { Button, Image } from "@heroui/react";
 
 import AboutPage from "../About";
 import ProjectsPage from "../Project";
-import SkillsSection from "../Skills";
 import EducationSection from "../Education";
-// import TechStack from "../Technologies";
+import TechStack from "../Technologies";
 import Contactpage from "../Contact";
+import HeroSlider from "../Slider";
 
 export default function HomePage() {
   return (
@@ -84,11 +84,11 @@ export default function HomePage() {
         </main>
 
         {/* Sections */}
+        <HeroSlider/>
         <AboutPage />
         <ProjectsPage />
-        <SkillsSection />
+        <TechStack />
         <EducationSection />
-        {/* <TechStack /> */}
         <Contactpage />
       </div>
     </div>

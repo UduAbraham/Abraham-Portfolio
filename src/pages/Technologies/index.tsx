@@ -22,20 +22,20 @@ import {
   SiFirebase,
   SiWebpack,
   SiNpm,
-//   SiReactnative,
+  // SiReactnative,
   SiFlutter,
   SiMobx,
   SiMongodb,
   SiDart,
   SiSolidity,
-//   SiMicrosoftteams,
+  // SiMicrosoftteams,
   SiClickup,
   SiNotion,
-//   SiJotai,
+  // SiJotai,
 } from "react-icons/si";
 
 export default function TechStack() {
-  const icon = (Icon: any, className = "") =>
+  const icon = (Icon: React.ElementType, className = "") =>
     React.createElement(Icon, { className: `text-4xl ${className}` });
 
   const categories = [
@@ -60,12 +60,12 @@ export default function TechStack() {
         { name: "Tailwind", icon: icon(SiTailwindcss, "text-[#06B6D4]") },
         { name: "Chakra UI", icon: icon(SiChakraui, "text-[#319795]") },
         { name: "Redux", icon: icon(SiRedux, "text-[#764ABC]") },
-        { name: "Jotai", icon: icon( "text-gray-200") },
+        // { name: "Jotai", icon: icon(SiJotai, "text-[#68D7AB]") },
         { name: "Firebase", icon: icon(SiFirebase, "text-[#FFCA28]") },
         { name: "Webpack", icon: icon(SiWebpack, "text-[#8DD6F9]") },
         { name: "Node Js", icon: icon(FaNodeJs, "text-[#68A063]") },
         { name: "NPM", icon: icon(SiNpm, "text-[#CB3837]") },
-        { name: "React Native", icon: icon( "text-[#61DAFB]") },
+        // { name: "React Native", icon: icon(SiReactnative, "text-[#61DAFB]") },
         { name: "Flutter", icon: icon(SiFlutter, "text-[#02569B]") },
         { name: "MobX", icon: icon(SiMobx, "text-[#E05A47]") },
         { name: "MongoDB", icon: icon(SiMongodb, "text-[#4DB33D]") },
@@ -75,7 +75,7 @@ export default function TechStack() {
     {
       title: "Productivity",
       items: [
-        { name: "Teams", icon: icon( "text-[#6264A7]") },
+        // { name: "Teams", icon: icon(SiMicrosoftteams, "text-[#6264A7]") },
         { name: "Slack", icon: icon(FaSlack, "text-[#4A154B]") },
         { name: "Trello", icon: icon(FaTrello, "text-[#0079BF]") },
         { name: "Clickup", icon: icon(SiClickup, "text-[#7B68EE]") },
@@ -87,23 +87,27 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f1c23] text-white font-display px-6 md:px-12 py-16">
-      <div className="max-w-6xl mx-auto space-y-10">
+    <div  className="min-h-screen bg-[#0f1c23] text-white font-display px-6 md:px-12 py-16">
+      <div className="max-w-4xl mx-auto space-y-6">
+        {/* Section Header */}
         <div>
-          <h2 className="text-4xl font-extrabold mb-3">Tech Stack</h2>
+          <h2 className="text-4xl font-extrabold mb-3 text-primary">Tech Stack</h2>
           <p className="text-gray-400 text-lg">
-            Here are the tools, programming languages, and communication platforms I use to support my workflow
+            Tools & technologies I use to build smooth and scalable digital experiences.
           </p>
         </div>
 
+        {/* Category Sections */}
         {categories.map((category, index) => (
-          <div key={index} className="bg-[#121826] rounded-xl p-6 space-y-6 shadow-md">
-            <h3 className="text-xl font-semibold">{category.title}</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div key={index} className="bg-[#1a1a1a]/30 rounded-xl p-6 text-center space-y-6 shadow-md">
+            <h3 className="text-xl font-semibold tracking-wide">{category.title}</h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-6  gap-6">
               {category.items.map((item, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center bg-[#1a2234] hover:bg-[#1f2a3e] p-4 rounded-lg transition-all duration-300"
+                  className="flex flex-col items-center  bg-[#1a2234]/40 hover:bg-[#1f2a3e] 
+                  p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer"
                 >
                   <div className="text-4xl mb-2">{item.icon}</div>
                   <p className="text-sm text-gray-300 font-medium text-center">{item.name}</p>
