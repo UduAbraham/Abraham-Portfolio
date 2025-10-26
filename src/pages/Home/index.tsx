@@ -12,7 +12,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#0f1c23] text-white font-display "id="Home">
-      <div className="mx-auto space-y-10">
+      <div className="mx-auto space-y-2">
         
         <NavBar/>
         
