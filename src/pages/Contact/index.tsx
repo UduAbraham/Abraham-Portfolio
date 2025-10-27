@@ -6,7 +6,7 @@ export default function Contactpage() {
   return (
     <section
       id="Contact"
-      className="min-h-screen bg-background-dark text-white flex flex-col items-center justify-center px-6 md:px-20 lg:px-40 pb-10"
+      className="min-h-screen bg-background-dark dark:bg-white text-white flex flex-col items-center justify-center px-6 md:px-20 lg:px-40 pb-10"
     >
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-primary mb-10 text-center">
@@ -14,17 +14,17 @@ export default function Contactpage() {
       </h2>
 
       {/* Contact Form */}
-      <form className="w-full max-w-2xl bg-[#1b2327] p-8 rounded-2xl shadow-lg border border-primary/20 space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form className="w-full max-w-2xl bg-[#1b2327] p-8 rounded-2xl  shadow-lg  dark:bg-gray-100 border border-primary/20 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none"
+            className="w-full rounded-lg bg-background-dark border border-primary/30 focus:border-primary dark:text-black p-4 text-gray-200 placeholder-gray-500 outline-none"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none"
+            className="w-full rounded-lg bg-background-dark dark:text-black border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none"
           />
         </div>
 
@@ -35,7 +35,7 @@ export default function Contactpage() {
         />
 
         <textarea
-          placeholder="Your Message"
+          placeholder="Your Message "
           className="w-full min-h-[150px] rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none resize-none"
         ></textarea>
 
@@ -49,7 +49,7 @@ export default function Contactpage() {
 
       {/* Direct Contact Info */}
       <div className="flex flex-col items-center gap-4 mt-10 text-center">
-        <p className="text-gray-400">Or reach out directly:</p>
+        <p className="text-gray-400 dark:text-black">Or reach out directly:</p>
         <a
           href="mailto:uduabraham12@gmail.com"
           className="text-lg text-primary hover:underline"
@@ -69,14 +69,14 @@ export default function Contactpage() {
           <a
             href="#"
             target="_blank"
-            className="text-gray-400 hover:text-primary transition-colors"
+            className="text-gray-400 dark:text-black hover:text-primary transition-colors"
           >
             <FaGithub size={24} />
           </a>
           <a
             href="#"
             target="_blank"
-            className="text-gray-400 hover:text-primary transition-colors"
+            className="text-gray-400 dark:text-black hover:text-primary transition-colors"
           >
             <BsTwitterX size={24} />
           </a>

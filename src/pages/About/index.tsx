@@ -3,15 +3,15 @@ import { FaCode } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#0f1c23] flex flex-col" id="About">
+    <div className="min-h-screen bg-[#0f1c23] dark:bg-white flex flex-col" id="About">
       <main className="flex-1 max-w-[1060px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-12 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
         
         {/* Left Section */}
         <section className="flex-1 w-full lg:w-2/3 text-center lg:text-left">
-          <h1 className="text-pink-200 text-4xl sm:text-5xl font-black mb-6">
+          <h1 className="text-pink-200 text-4xl sm:text-5xl font-black mb-6 dark:text-blue-500">
             About Me
           </h1>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed dark:text-black">
             I’m a passionate software engineer focused on crafting elegant, efficient,
             and user-friendly web applications. My work combines creativity with
             technical precision to deliver clean, scalable, and maintainable code.
@@ -20,7 +20,7 @@ export default function AboutPage() {
           <h2 className="text-primary text-2xl font-bold mt-10 mb-3">
             My Philosophy
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg mb-6">
+          <p className="text-gray-300 text-base sm:text-lg mb-6 dark:text-black">
             I believe great software is built through collaboration, clean architecture,
             and continuous learning. My focus is not just on code—but on solving problems
             and delivering value.
@@ -29,7 +29,7 @@ export default function AboutPage() {
           <h3 className="text-primary text-xl font-bold mb-3">
             Personal Interests
           </h3>
-          <p className="text-gray-400 text-base sm:text-lg">
+          <p className="text-gray-400 text-base sm:text-lg dark:text-black">
             Outside coding, I enjoy exploring UI design trends, chess, and hiking — 
             activities that inspire focus and creativity in my projects.
           </p>

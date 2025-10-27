@@ -1,6 +1,6 @@
 import { Card, Button, Image } from "@heroui/react";
-import { FaGithub } from "react-icons/fa";
 import { Project } from "./project.type";
+import { BsArrowUpRightCircle } from 'react-icons/bs';
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -16,15 +16,15 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="p-4 flex-1">
-        <h3 className="text-lg font-bold text-white">{project.title}</h3>
-        <p className="text-sm text-[#A0A0A0] mt-2">{project.description}</p>
+        <h3 className="text-lg font-bold text-white dark:text-black">{project.title}</h3>
+        <p className="text-sm text-[#A0A0A0] mt-2 dark:text-black">{project.description}</p>
       </div>
 
       <div className="p-4 pt-0">
-        <a href={project.repoUrl} target="_blank" rel="noreferrer">
-          <Button className="w-full hover:bg-[#35454d] flex items-center gap-2" color="primary">
-            <FaGithub />
-            View Code
+        <a href={project.webUrl} target="_blank" rel="noreferrer">
+          <Button className="w-full hover:bg-[#35454d] flex items-center gap-2 font-bold" color="primary">
+            <BsArrowUpRightCircle className="text-xl"/>
+            View Website
           </Button>
         </a>
       </div>

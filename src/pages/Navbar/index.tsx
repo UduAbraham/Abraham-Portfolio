@@ -10,6 +10,7 @@ import {
   NavbarMenuItem,
 } from "@heroui/react";
 import { useState } from "react";
+import { ThemeSwitch } from "../../components/theme-switch";; // ✅ Added here
 
 export const AcmeLogo = () => {
   return (
@@ -39,11 +40,11 @@ export default function NavBar() {
     <Navbar
       position="static"
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#0f1c23] py-10"
+      className="bg-[#0f1c23] py-10 dark:bg-white"
     >
       <NavbarBrand className="gap-2">
-        <SiElementary />
-        <p className="text-lg sm:text-xl font-bold tracking-tight">Abraham</p>
+        <SiElementary className="dark:text-black" />
+        <p className="text-lg sm:text-xl font-bold tracking-tight dark:text-black">Abraham</p>
       </NavbarBrand>
 
       {/* Desktop Menu */}
@@ -53,8 +54,10 @@ export default function NavBar() {
       >
         {menuItems.map((item, index) => (
           <NavbarItem key={index}>
-            <Link href={item.href} className="text-white "
-             onClick={() => setIsMenuOpen(false)}
+            <Link
+              href={item.href}
+              className="text-white dark:text-black"
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </Link>
@@ -62,19 +65,29 @@ export default function NavBar() {
         ))}
       </NavbarContent>
 
+      {/* ✅ Theme Switch Desktop */}
+      <NavbarContent justify="end" className="hidden md:flex">
+        <ThemeSwitch />
+      </NavbarContent>
+
       {/* Mobile Menu Toggle Button */}
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="md:hidden">
+        <ThemeSwitch /> {/* ✅ Visible in mobile as well */}
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden text-white "
+          className="text-white"
         />
       </NavbarContent>
 
       {/* Mobile Dropdown Menu */}
       <NavbarMenu className="bg-gray-800">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index} className="">
-            <Link href={item.href} className="text-white text-lg ">
+          <NavbarMenuItem key={index}>
+            <Link
+              href={item.href}
+              className="text-white text-lg "
+              onClick={() => setIsMenuOpen(false)}
+            >
               {item.name}
             </Link>
           </NavbarMenuItem>

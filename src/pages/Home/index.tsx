@@ -11,7 +11,7 @@ import NavBar from "../Navbar";
 export default function HomePage() {
 
   return (
-    <div className="min-h-screen bg-[#0f1c23] text-white font-display "id="Home">
+    <div className="min-h-screen bg-[#0f1c23] dark:bg-white text-white font-display "id="Home">
       <div className="mx-auto space-y-2">
         
         <NavBar/>
@@ -29,12 +29,12 @@ export default function HomePage() {
 
           {/* Intro Text Section */}
           <div className="flex flex-col gap-6 max-w-lg text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
-              Hi, I’m <span className="text-primary">Abraham</span>, a
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight dark:text-black">
+              Hi, I’m <span className="text-primary ">Abraham</span>, a
               Frontend Engineer crafting sleek, interactive, and scalable web
               applications.
             </h1>
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed dark:text-black">
               I specialize in building responsive, performant UIs, My goal is to
               transform ideas into visually stunning, accessible digital
               experiences.
@@ -43,7 +43,7 @@ export default function HomePage() {
              
               <Button
                 variant="bordered"
-                className="text-white border-[#27343a] hover:bg-[#27343a] hover:text-primary transition w-full sm:w-auto"
+                className="text-white border-[#27343a] hover:bg-[#27343a] dark:text-black hover:text-primary transition w-full sm:w-auto"
                as="a" href="#Contact"
               >
                 Contact Me

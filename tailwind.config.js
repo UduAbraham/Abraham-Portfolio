@@ -9,9 +9,13 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {},
-  },
   darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        darkBg: "#0f1d2c",
+      },
+    },
+  },
   plugins: [heroui()],
 }

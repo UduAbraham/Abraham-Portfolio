@@ -35,19 +35,19 @@ const techNames = [
 
 export default function HeroSlider() {
   return (
-    <div className="w-full bg-[#FFFFFF20] border-y border-[#FFFFFF20] overflow-hidden select-none py-6">
+    <div className="w-full bg-[#FFFFFF20] dark:bg-white border-y border-[#FFFFFF20] overflow-hidden select-none py-6">
       <div className="flex gap-8 animate-scroll whitespace-nowrap hover:[animation-play-state:paused]">
         {/* First list */}
         {techNames.map((label, index) => (
           <div key={index} className="flex items-center gap-3">
-            <p className="text-white text-lg">{label.Name}</p>
+            <p className="text-white text-lg dark:text-black">{label.Name}</p>
           </div>
         ))}
 
         {/* Duplicate for seamless infinite scroll */}
         {techNames.map((label, index) => (
           <div key={`dup-${index}`} className="flex items-center gap-3">
-            <p className="text-white text-lg">{label.Name}</p>
+            <p className="text-white text-lg dark:text-black">{label.Name}</p>
           </div>
         ))}
       </div>
