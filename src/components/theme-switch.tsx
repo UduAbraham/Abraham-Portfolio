@@ -10,8 +10,7 @@ export const ThemeSwitch: FC = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted)
-    return <div className="w-6 h-6" />; // prevent hydration mismatch
+  if (!mounted) return <div className="w-6 h-6" />;
 
   const isLight = theme === "light";
 
@@ -19,13 +18,9 @@ export const ThemeSwitch: FC = () => {
     <button
       aria-label="Toggle Theme"
       onClick={() => setTheme(isLight ? "dark" : "light")}
-      className="p-2 rounded-lg text-white dark:text-yellow-400 transition hover:opacity-80"
+      className="p-2 rounded-lg text-gray-800 dark:text-yellow-400 transition hover:opacity-80"
     >
-      {isLight ? (
-        <FaMoon className="text-lg" />
-      ) : (
-        <FaSun className="text-lg" />
-      )}
+      {isLight ? <FaMoon className="text-lg" /> : <FaSun className="text-lg" />}
     </button>
   );
 };

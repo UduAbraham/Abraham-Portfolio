@@ -15,7 +15,10 @@ export function Provider({ children }: { children: React.ReactNode }) {
 
   return (
     <HeroUIProvider navigate={navigate} useHref={useHref}>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
+      <NextThemesProvider 
+       attribute="class"
+        defaultTheme="system"
+        enableSystem={false}>
         {children}
       </NextThemesProvider>
     </HeroUIProvider>
