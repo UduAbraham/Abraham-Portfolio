@@ -15,7 +15,7 @@ const projects: Project[] = [
     id: "p2",
     title: "Bled's Porfolio",
     description:
-      "Interactive charts and dashboards for exploring complex datasets with animated charts.",
+      "Dynamic showcase of a modern creator portfolio with immersive visuals spotlighting collaborations, campaigns, top performing partnership and community influence.",
     image:
       "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&q=60&auto=format&fit=crop",
     webUrl: "bledigmi.com",
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
       <div className="container mx-auto px-4 md:px-10 lg:px-40">
         
         <section className="mt-8 mb-6 ">
-          <h2 className="text-4xl font-black dark:text-blue-500">Projects</h2>
+          <h2 className="text-4xl font-black text-blue-500 dark:text-blue-500">Projects</h2>
           <p className="mt-2 text-[#9bb0bb] max-w-2xl dark:text-black">
             A curated showcase of my best frontend projects — UI demonstrating
             performance and design detail.

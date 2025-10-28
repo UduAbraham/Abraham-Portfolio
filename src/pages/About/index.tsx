@@ -17,7 +17,7 @@ export default function AboutPage() {
             technical precision to deliver clean, scalable, and maintainable code.
           </p>
 
-          <h2 className="text-primary text-2xl font-bold mt-10 mb-3">
+          <h2 className="text-blue-500 text-2xl font-bold mt-10 mb-3">
             My Philosophy
           </h2>
           <p className="text-gray-300 text-base sm:text-lg mb-6 dark:text-black">
@@ -26,7 +26,7 @@ export default function AboutPage() {
             and delivering value.
           </p>
 
-          <h3 className="text-primary text-xl font-bold mb-3">
+          <h3 className="text-blue-500 text-xl font-bold mb-3">
             Personal Interests
           </h3>
           <p className="text-gray-400 text-base sm:text-lg dark:text-black">

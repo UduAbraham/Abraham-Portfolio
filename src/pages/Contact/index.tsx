@@ -9,7 +9,7 @@ export default function Contactpage() {
       className="min-h-screen bg-background-dark dark:bg-white text-white flex flex-col items-center justify-center px-6 md:px-20 lg:px-40 pb-10"
     >
       {/* Section Title */}
-      <h2 className="text-4xl font-bold text-primary mb-10 text-center">
+      <h2 className="text-4xl font-bold text-blue-500 mb-10 text-center">
         Contact Me
       </h2>
 
@@ -31,17 +31,17 @@ export default function Contactpage() {
         <input
           type="text"
           placeholder="Subject"
-          className="w-full rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none"
+          className="w-full dark:text-black rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none"
         />
 
         <textarea
           placeholder="Your Message "
-          className="w-full min-h-[150px] rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none resize-none"
+          className="w-full min-h-[150px] dark:text-black rounded-lg bg-background-dark border border-primary/30 focus:border-primary p-4 text-gray-200 placeholder-gray-500 outline-none resize-none"
         ></textarea>
 
         <Button
           type="submit"
-          className="bg-primary text-white hover:bg-primary/80 px-6 py-3 rounded-lg font-semibold w-full md:w-auto"
+          className="bg-blue-500  text-white hover:bg-primary/80 px-6 py-3 rounded-lg font-semibold w-full md:w-auto"
         >
           Send Message
         </Button>
@@ -52,7 +52,7 @@ export default function Contactpage() {
         <p className="text-gray-400 dark:text-black">Or reach out directly:</p>
         <a
           href="mailto:uduabraham12@gmail.com"
-          className="text-lg text-primary hover:underline"
+          className="text-lg text-blue-500 hover:underline"
         >
          uduabraham12@gmail.com
         </a>

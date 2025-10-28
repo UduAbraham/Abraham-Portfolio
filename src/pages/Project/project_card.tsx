@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="p-4 pt-0">
         <a href={project.webUrl} target="_blank" rel="noreferrer">
-          <Button className="w-full hover:bg-[#35454d] flex items-center gap-2 font-bold" color="primary">
+          <Button className="w-full hover:bg-[#35454d] py-2 flex items-center gap-2 rounded-lg bg-blue-500 font-bold" >
             <BsArrowUpRightCircle className="text-xl"/>
             View Website
           </Button>

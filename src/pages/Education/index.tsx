@@ -19,14 +19,14 @@ export default function EducationSection() {
     {
       icon: <FaFlask />,
       title: "Bachelor of Science in Biochemistry",
-      institution: "University of California, Berkeley",
-      period: "August 2018 - May 2022",
+      institution: "Ebonyi State Universiity",
+      period: "Oct 2018 - Nov 2022",
       sectionTitle: "Academic Highlights",
       details: [
-        "Organic Chemistry I & II",
-        "Molecular Biology",
-        "Genetics and Genomics",
-        "Undergraduate Research on Protein Folding",
+        "Deep understanding of molecular and cellular processes",
+        "Strong analytical and research-driven mindset",
+        "Experienced in critical thinking and structured experimentation",
+        "This scientific background now enhances my ability to build smart, scalable engineering solutions.",
       ],
     },
   ];
@@ -34,7 +34,7 @@ export default function EducationSection() {
   return (
     <div className="min-h-screen bg-[#0f1c23] py-15 dark:bg-white text-white font-display flex flex-col items-center  px-4 sm:px-10 lg:px-32">
       <div className="max-w-4xl w-full">
-        <h2 className="text-primary text-3xl sm:text-4xl font-bold leading-tight pb-6 text-center md:text-left">
+        <h2 className="text-blue-500 text-3xl sm:text-4xl font-bold leading-tight pb-6 text-center md:text-left">
           Education
         </h2>
 

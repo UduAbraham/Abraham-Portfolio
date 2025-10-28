@@ -2,16 +2,6 @@
 
 
 
-html {
-  color-scheme: light;
-  background: white;
-}
-
-html.dark {
-  color-scheme: dark;
-  background: #0f1c23;
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);

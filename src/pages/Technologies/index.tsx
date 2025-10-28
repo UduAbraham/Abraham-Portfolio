@@ -91,7 +91,7 @@ export default function TechStack() {
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Section Header */}
         <div>
-          <h2 className="text-4xl font-extrabold mb-3 text-primary">Tech Stack</h2>
+          <h2 className="text-4xl font-extrabold mb-3 text-blue-500">Tech Stack</h2>
           <p className="text-gray-400 text-lg dark:text-black">
             Tools & technologies I use to build smooth and scalable digital experiences.
           </p>
