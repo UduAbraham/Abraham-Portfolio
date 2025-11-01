@@ -24,7 +24,7 @@ export default function HomePage() {
             <Image
               src="src\Asset\image\WhatsApp Image 2025-10-27 at 18.38.22_fd3e3377.jpg"
               alt="Udu Abraham"
-              className="rounded-full border-4 border-primary/50 shadow-lg shadow-primary/20 object-cover w-full aspect-square my-10"
+              className="rounded-full border-4 border-blue-300 shadow-lg shadow-primary/20 object-cover w-full aspect-square my-10"
             />
           </div>
 
