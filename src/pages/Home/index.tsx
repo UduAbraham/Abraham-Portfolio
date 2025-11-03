@@ -1,4 +1,5 @@
 import { Button, Image } from "@heroui/react";
+import Abraham from "src/Asset/image/WhatsApp Image 2025-10-27 at 18.38.22_fd3e3377.jpg";
 
 import AboutPage from "../About";
 import ProjectsPage from "../Project";
@@ -22,7 +23,7 @@ export default function HomePage() {
           {/* Image Section */}
           <div className="max-w-[280px] sm:max-w-[320px] md:max-w-sm flex justify-center">
             <Image
-              src="src\Asset\image\WhatsApp Image 2025-10-27 at 18.38.22_fd3e3377.jpg"
+              src={Abraham}
               alt="Udu Abraham"
               className="rounded-full border-4 border-blue-300 shadow-lg shadow-primary/20 object-cover w-full aspect-square my-10"
             />
