@@ -1,5 +1,5 @@
 import { Button, Image } from "@heroui/react";
-import Abraham from "../../assets/abraham.png";
+import Abraham from "../../asset/image/abraham.jpg";
 
 import AboutPage from "../About";
 import ProjectsPage from "../Project";
