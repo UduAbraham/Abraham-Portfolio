@@ -14,7 +14,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="w-full h-full object-cover"
         />
       </div>
-
       <div className="p-4 flex-1">
         <h3 className="text-lg font-bold text-white dark:text-black">{project.title}</h3>
         <p className="text-sm text-[#A0A0A0] mt-2 dark:text-black">{project.description}</p>
