@@ -87,35 +87,37 @@ export default function TechStack() {
   ];
 
   return (
-    <div  className="min-h-screen bg-[#0f1c23] dark:bg-white text-white font-display px-6 md:px-12 py-16" id="TechStack">
-      <div className="max-w-4xl mx-auto space-y-6">
+    <div className="min-h-screen bg-[#0f1c23] dark:bg-white text-white font-display px-6 sm:px-10 py-20" id="TechStack">
+      <div className="max-w-6xl mx-auto space-y-12">
         {/* Section Header */}
-        <div>
-          <h2 className="text-4xl font-extrabold mb-3 text-blue-500">Tech Stack</h2>
-          <p className="text-gray-400 text-lg dark:text-black">
+        <div className="text-center md:text-left">
+          <h2 className="text-4xl sm:text-5xl font-black mb-4 text-blue-500">Tech Stack</h2>
+          <p className="text-zinc-400 text-lg sm:text-xl max-w-2xl dark:text-zinc-600">
             Tools & technologies I use to build smooth and scalable digital experiences.
           </p>
         </div>
 
         {/* Category Sections */}
-        {categories.map((category, index) => (
-          <div key={index} className="bg-[#1a1a1a]/30 dark:bg-gray-100 rounded-xl p-6 text-center space-y-6 shadow-xl">
-            <h3 className="text-xl font-semibold tracking-wide dark:text-black">{category.title}</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-6  gap-6">
-              {category.items.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-center  bg-[#1a2234]/40 dark:bg-gray-100 hover:bg-[#1f2a3e] dark:text-black 
-                  p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                >
-                  <div className="text-4xl mb-2 ">{item.icon}</div>
-                  <p className="text-sm text-gray-300 font-medium text-center dark:text-black">{item.name}</p>
-                </div>
-              ))}
+        <div className="grid gap-10">
+          {categories.map((category, index) => (
+            <div key={index} className="bg-[#1a1a1a]/40 dark:bg-zinc-50 border border-white/5 dark:border-black/5 rounded-3xl p-8 sm:p-10 shadow-2xl">
+              <h3 className="text-2xl font-bold mb-8 dark:text-black">{category.title}</h3>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8">
+                {category.items.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col items-center justify-center bg-[#1a2234]/40 dark:bg-white hover:bg-[#1f2a3e] dark:hover:bg-zinc-100 group
+                    p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(6,168,249,0.2)] cursor-default"
+                  >
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                    <p className="text-sm sm:text-base text-zinc-400 font-semibold group-hover:text-white dark:group-hover:text-black transition-colors dark:text-zinc-600">{item.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

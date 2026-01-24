@@ -32,39 +32,45 @@ export default function EducationSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f1c23] py-15 dark:bg-white text-white font-display flex flex-col items-center  px-4 sm:px-10 lg:px-32">
+    <div className="min-h-screen bg-[#0f1c23] py-20 dark:bg-white text-white font-display flex flex-col items-center px-6 sm:px-10 lg:px-32">
       <div className="max-w-4xl w-full">
-        <h2 className="text-blue-500 text-3xl sm:text-4xl font-bold leading-tight pb-6 text-center md:text-left">
+        <h2 className="text-blue-500 text-4xl sm:text-5xl font-black mb-12 text-center md:text-left">
           Education
         </h2>
 
-        <div className="grid grid-cols-[auto_1fr] gap-x-6 py-6 relative">
+        <div className="relative flex flex-col gap-12">
+          {/* Timeline Line (Desktop only for better looks) */}
+          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-primary/20 hidden sm:block" />
+
           {educationData.map((edu, index) => (
-            <div key={index} className="contents">
-              {/* Timeline Icon + Line */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="p-3 bg-primary/20 text-primary rounded-full text-lg">
+            <div key={index} className="flex gap-6 md:gap-10 relative">
+              {/* Timeline Icon */}
+              <div className="z-10 bg-[#0f1c23] dark:bg-white p-1 hidden sm:block">
+                <div className="p-3 bg-primary/20 text-primary rounded-full text-xl shadow-[0_0_15px_rgba(6,168,249,0.2)]">
                   {edu.icon}
                 </div>
-                {index < educationData.length - 1 && (
-                  <div className="w-px bg-primary/30 h-full" />
-                )}
               </div>
 
               {/* Education Card */}
-              <div className="pb-12">
-                <Card className="bg-[#1a1a1a]/20 rounded-lg shadow-xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 p-6 rounded-xl">
-                  <p className="text-xl font-semibold text-white dark:text-black">{edu.title}</p>
-                  <p className="text-zinc-400 text-base dark:text-black">{edu.institution}</p>
-                  <p className="text-zinc-500 text-sm mt-1 dark:text-black">{edu.period}</p>
+              <div className="flex-1">
+                <Card className="bg-[#1a1a1a]/40 dark:bg-gray-50 border border-white/5 dark:border-black/5 rounded-2xl shadow-2xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 p-6 sm:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white dark:text-black">{edu.title}</h3>
+                    <span className="text-primary font-medium text-sm sm:text-base">{edu.period}</span>
+                  </div>
 
-                  <div className="mt-4">
-                    <h3 className="text-zinc-300 font-medium text-sm mb-2 dark:text-black">
+                  <p className="text-zinc-400 text-lg mb-6 dark:text-zinc-600">{edu.institution}</p>
+
+                  <div className="space-y-3">
+                    <h4 className="text-zinc-300 font-semibold text-base dark:text-zinc-700">
                       {edu.sectionTitle}
-                    </h3>
-                    <ul className="list-disc list-inside text-zinc-400 text-sm space-y-1  dark:text-black">
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                       {edu.details.map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li key={i} className="flex items-start gap-2 text-zinc-400 text-sm sm:text-base dark:text-zinc-600">
+                          <span className="text-primary mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0" />
+                          {item}
+                        </li>
                       ))}
                     </ul>
                   </div>

@@ -19,35 +19,33 @@ export default function HomePage() {
         <NavBar />
 
         {/* Hero Section */}
-        <main className="flex flex-cols md:flex-row items-center justify-center px-6 sm:px-10 lg:px-20 py- md:py-20 gap-10 md:gap-14">
+        <main className="flex flex-col md:flex-row items-center justify-center px-6 sm:px-10 lg:px-20 py-10 md:py-24 gap-10 md:gap-14">
           {/* Image Section */}
-          <div className="max-w-[280px] sm:max-w-[320px] md:max-w-sm flex justify-center">
+          <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-sm flex justify-center">
             <Image
               src={Abraham}
               alt="Udu Abraham"
-              className="rounded-full border-4 border-blue-300 shadow-lg shadow-primary/20 object-cover w-full aspect-square my-10"
+              className="rounded-full border-4 border-blue-300 shadow-lg shadow-primary/20 object-cover w-full aspect-square"
             />
           </div>
 
           {/* Intro Text Section */}
-          <div className="flex flex-col gap-6 max-w-lg text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-3xl font-black leading-tight dark:text-black">
+          <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight dark:text-black">
               Hi, I’m <span className="text-blue-600 ">Abraham</span>, a
               Frontend Engineer crafting sleek, interactive, and scalable web
               applications.
             </h1>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed dark:text-black">
-              I specialize in building responsive, performant UIs, My goal is to
+              I specialize in building responsive, performant UIs. My goal is to
               transform ideas into visually stunning, accessible digital
               experiences.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-2">
               <Button
-                variant="bordered"
-                className="text-white border-[#27343a] py-2
-                 rounded-lg hover:bg-[#27343a] dark:text-black
-                  hover:text-primary dark:text-white
-                 transition w-full bg-blue-600 sm:w-auto"
+                variant="solid"
+                color="primary"
+                className="text-white py-6 px-8 rounded-lg font-bold transition w-full sm:w-auto"
                 as="a"
                 href="#Contact"
               >
