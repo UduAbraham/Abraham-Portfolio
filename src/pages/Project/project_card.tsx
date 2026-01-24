@@ -5,7 +5,7 @@ import { BsArrowUpRightCircle } from 'react-icons/bs';
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="bg-[#1a2234]/40 rounded-lg p-0 flex flex-col h-full overflow-hidden hover:-translate-y-1 transition shadow-md hover:shadow-primary/20">
-      
+
       {/* ✅ Full-width Image */}
       <div className="w-full h-48 overflow-hidden">
         <Image
@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="p-4 pt-0">
         <a href={project.webUrl} target="_blank" rel="noreferrer">
           <Button className="w-full hover:bg-[#35454d] py-2 flex items-center gap-2 rounded-lg bg-blue-500 font-bold" >
-            <BsArrowUpRightCircle className="text-xl"/>
+            <BsArrowUpRightCircle className="text-xl" />
             View Website
           </Button>
         </a>

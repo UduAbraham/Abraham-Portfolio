@@ -32,7 +32,7 @@ export default function EducationSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f1c23] py-20 dark:bg-white text-white font-display flex flex-col items-center px-6 sm:px-10 lg:px-32">
+    <div className="min-h-screen bg-[#0f1c23] py-20 dark:bg-white text-white font-display flex flex-col items-center px-6 sm:px-10 lg:px-32" id="Education">
       <div className="max-w-4xl w-full">
         <h2 className="text-blue-500 text-4xl sm:text-5xl font-black mb-12 text-center md:text-left">
           Education
