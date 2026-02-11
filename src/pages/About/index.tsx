@@ -3,9 +3,11 @@ import { FaCode } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#0f1c23] dark:bg-white flex flex-col" id="About">
+    <div
+      className="min-h-screen bg-[#0f1c23] dark:bg-white flex flex-col"
+      id="About"
+    >
       <main className="flex-1 max-w-6xl mx-auto px-6 sm:px-10 py-16 md:py-24 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
-
         {/* Left Section */}
         <section className="flex-1 w-full text-center lg:text-left">
           <h1 className="text-[#fbcfe8] dark:text-blue-600 text-4xl sm:text-5xl lg:text-6xl font-black mb-8">
@@ -13,9 +15,10 @@ export default function AboutPage() {
           </h1>
           <div className="space-y-6">
             <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed dark:text-black">
-              I’m a passionate software engineer focused on crafting elegant, efficient,
-              and user-friendly web applications. My work combines creativity with
-              technical precision to deliver clean, scalable, and maintainable code.
+              I’m a passionate software engineer focused on crafting elegant,
+              efficient, and user-friendly web applications. My work combines
+              creativity with technical precision to deliver clean, scalable,
+              and maintainable code.
             </p>
 
             <div>
@@ -23,9 +26,9 @@ export default function AboutPage() {
                 My Philosophy
               </h2>
               <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed dark:text-black">
-                I believe great software is built through collaboration, clean architecture,
-                and continuous learning. My focus is not just on code—but on solving problems
-                and delivering value.
+                I believe great software is built through collaboration, clean
+                architecture, and continuous learning. My focus is not just on
+                code—but on solving problems and delivering value.
               </p>
             </div>
 
@@ -34,8 +37,9 @@ export default function AboutPage() {
                 Personal Interests
               </h3>
               <p className="text-gray-400 text-base sm:text-lg lg:text-xl leading-relaxed dark:text-black">
-                Outside coding, I enjoy exploring UI design trends, chess, and hiking —
-                activities that inspire focus and creativity in my projects.
+                Outside coding, I enjoy exploring UI design trends, chess, and
+                hiking — activities that inspire focus and creativity in my
+                projects.
               </p>
             </div>
           </div>
@@ -47,7 +51,6 @@ export default function AboutPage() {
             <FaCode className="text-blue-500 text-6xl sm:text-8xl" />
           </Card>
         </aside>
-
       </main>
     </div>
   );

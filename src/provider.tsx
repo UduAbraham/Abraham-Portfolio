@@ -2,7 +2,7 @@ import type { NavigateOptions } from "react-router-dom";
 
 import { HeroUIProvider } from "@heroui/system";
 import { useHref, useNavigate } from "react-router-dom";
-import {ThemeProvider as NextThemesProvider} from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 declare module "@react-types/shared" {
   interface RouterConfig {
@@ -15,10 +15,11 @@ export function Provider({ children }: { children: React.ReactNode }) {
 
   return (
     <HeroUIProvider navigate={navigate} useHref={useHref}>
-      <NextThemesProvider 
-       attribute="class"
+      <NextThemesProvider
+        attribute="class"
         defaultTheme="system"
-        enableSystem={false}>
+        enableSystem={false}
+      >
         {children}
       </NextThemesProvider>
     </HeroUIProvider>

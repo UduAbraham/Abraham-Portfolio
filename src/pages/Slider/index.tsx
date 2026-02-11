@@ -1,4 +1,3 @@
-
 const techNames = [
   { Name: "HTML5" },
   { Name: "CSS3" },
@@ -32,7 +31,6 @@ const techNames = [
   { Name: "Dropbox" },
 ];
 
-
 export default function HeroSlider() {
   return (
     <div className="w-full bg-[#FFFFFF20] dark:bg-white border-y border-[#FFFFFF20] overflow-hidden select-none py-6">
@@ -53,5 +51,4 @@ export default function HeroSlider() {
       </div>
     </div>
   );
-};
-
+}

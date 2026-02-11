@@ -1,5 +1,3 @@
-
-
 type SkillCategory = {
   title: string;
   skills: { name: string; icon: string }[];
@@ -38,7 +36,9 @@ const SKILLS: SkillCategory[] = [
 export default function SkillsSection() {
   return (
     <section className="min-h-screen bg-background-dark text-white font-display px-4 md:px-10 lg:px-40 ">
-      <h2 className="text-3xl font-bold text-center mb-10 text-blue-500">Technical Skills</h2>
+      <h2 className="text-3xl font-bold text-center mb-10 text-blue-500">
+        Technical Skills
+      </h2>
 
       {SKILLS.map((category, idx) => (
         <div key={idx} className="mb-10">

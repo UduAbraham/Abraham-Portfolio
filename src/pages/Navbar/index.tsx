@@ -6,7 +6,9 @@ import {
   NavbarItem,
   Link,
 } from "@heroui/react";
+
 import { ThemeSwitch } from "../../components/theme-switch";
+
 import MobileNav from "./MobileNav";
 
 export default function NavBar() {
@@ -20,9 +22,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar
-        className="bg-[#0f1c23] dark:bg-white py-4 md:py-6"
-      >
+      <Navbar className="bg-[#0f1c23] dark:bg-white py-4 md:py-6">
         {/* ✅ Left: Logo */}
         <NavbarContent justify="start">
           <NavbarBrand className="gap-2">
@@ -35,14 +35,14 @@ export default function NavBar() {
 
         {/* ✅ Center: Nav Links */}
         <NavbarContent
-          justify="center"
           className="hidden md:flex gap-8 lg:gap-10 px-6"
+          justify="center"
         >
           {menuItems.map((item, index) => (
             <NavbarItem key={index}>
               <Link
-                href={item.href}
                 className="text-white dark:text-black text-lg tracking-wide hover:text-primary transition"
+                href={item.href}
               >
                 {item.name}
               </Link>

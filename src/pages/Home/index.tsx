@@ -1,6 +1,5 @@
 import { Button, Image } from "@heroui/react";
 import Abraham from "../../asset/image/abraham.jpg";
-
 import AboutPage from "../About";
 import ProjectsPage from "../Project";
 import EducationSection from "../Education";
@@ -23,9 +22,9 @@ export default function HomePage() {
           {/* Image Section */}
           <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-sm flex justify-center">
             <Image
-              src={Abraham}
               alt="Udu Abraham"
               className="rounded-full border-4 border-blue-300 shadow-lg shadow-primary/20 object-cover w-full aspect-square"
+              src={Abraham}
             />
           </div>
 
@@ -43,11 +42,11 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-2">
               <Button
-                variant="solid"
-                color="primary"
-                className="text-white py-6 px-8 rounded-lg font-bold transition w-full sm:w-auto"
                 as="a"
+                className="text-white py-6 px-8 rounded-lg font-bold transition w-full sm:w-auto"
+                color="primary"
                 href="#Contact"
+                variant="solid"
               >
                 Contact Me
               </Button>

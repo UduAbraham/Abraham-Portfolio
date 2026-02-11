@@ -32,7 +32,10 @@ export default function EducationSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f1c23] py-20 dark:bg-white text-white font-display flex flex-col items-center px-6 sm:px-10 lg:px-32" id="Education">
+    <div
+      className="min-h-screen bg-[#0f1c23] py-20 dark:bg-white text-white font-display flex flex-col items-center px-6 sm:px-10 lg:px-32"
+      id="Education"
+    >
       <div className="max-w-4xl w-full">
         <h2 className="text-blue-500 text-4xl sm:text-5xl font-black mb-12 text-center md:text-left">
           Education
@@ -55,11 +58,17 @@ export default function EducationSection() {
               <div className="flex-1">
                 <Card className="bg-[#1a1a1a]/40 dark:bg-gray-50 border border-white/5 dark:border-black/5 rounded-2xl shadow-2xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 p-6 sm:p-8">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white dark:text-black">{edu.title}</h3>
-                    <span className="text-primary font-medium text-sm sm:text-base">{edu.period}</span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white dark:text-black">
+                      {edu.title}
+                    </h3>
+                    <span className="text-primary font-medium text-sm sm:text-base">
+                      {edu.period}
+                    </span>
                   </div>
 
-                  <p className="text-zinc-400 text-lg mb-6 dark:text-zinc-600">{edu.institution}</p>
+                  <p className="text-zinc-400 text-lg mb-6 dark:text-zinc-600">
+                    {edu.institution}
+                  </p>
 
                   <div className="space-y-3">
                     <h4 className="text-zinc-300 font-semibold text-base dark:text-zinc-700">
@@ -67,7 +76,10 @@ export default function EducationSection() {
                     </h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                       {edu.details.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-zinc-400 text-sm sm:text-base dark:text-zinc-600">
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-zinc-400 text-sm sm:text-base dark:text-zinc-600"
+                        >
                           <span className="text-primary mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0" />
                           {item}
                         </li>

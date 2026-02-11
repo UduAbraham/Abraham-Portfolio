@@ -17,8 +17,8 @@ export const ThemeSwitch: FC = () => {
   return (
     <button
       aria-label="Toggle Theme"
-      onClick={() => setTheme(isLight ? "dark" : "light")}
       className="p-2 rounded-lg text-gray-800 dark:text-yellow-400 transition hover:opacity-80"
+      onClick={() => setTheme(isLight ? "dark" : "light")}
     >
       {isLight ? <FaMoon className="text-lg" /> : <FaSun className="text-lg" />}
     </button>
