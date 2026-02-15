@@ -1,8 +1,32 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { Button } from "@heroui/button";
+import { useState } from "react";
 
 export default function Contactpage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, subject, message } = formData;
+    const body = `Name: ${name}%0D%0AMessage: ${message}`;
+    window.location.href = `mailto:uduabraham12@gmail.com?subject=${encodeURIComponent(
+      subject || "Contact from Portfolio"
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <section
       className="min-h-screen bg-background-dark dark:bg-white text-white flex flex-col items-center justify-center px-6 sm:px-10 py-20 md:py-24"
@@ -14,7 +38,10 @@ export default function Contactpage() {
       </h2>
 
       {/* Contact Form */}
-      <form className="w-full max-w-3xl bg-[#1b2327]/60 backdrop-blur-md p-8 sm:p-12 rounded-3xl shadow-2xl dark:bg-zinc-50 border border-white/10 dark:border-black/5 space-y-8">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-3xl bg-[#1b2327]/60 backdrop-blur-md p-8 sm:p-12 rounded-3xl shadow-2xl dark:bg-zinc-50 border border-white/10 dark:border-black/5 space-y-8"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label
@@ -28,6 +55,9 @@ export default function Contactpage() {
               id="name"
               placeholder="Your Name"
               type="text"
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
           </div>
           <div className="space-y-2">
@@ -42,6 +72,9 @@ export default function Contactpage() {
               id="email"
               placeholder="Your Email"
               type="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
           </div>
         </div>
@@ -58,6 +91,9 @@ export default function Contactpage() {
             id="subject"
             placeholder="What's this about?"
             type="text"
+            value={formData.subject}
+            onChange={handleChange}
+            required
           />
         </div>
 
@@ -72,6 +108,9 @@ export default function Contactpage() {
             className="w-full min-h-[160px] rounded-xl bg-background-dark border border-white/10 dark:border-black/10 focus:border-blue-500 dark:text-black p-4 text-gray-200 outline-none resize-none transition-all focus:ring-2 focus:ring-blue-500/20"
             id="message"
             placeholder="Tell me more..."
+            value={formData.message}
+            onChange={handleChange}
+            required
           />
         </div>
 
@@ -126,3 +165,4 @@ export default function Contactpage() {
     </section>
   );
 }
+

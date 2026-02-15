@@ -45,7 +45,7 @@ export default function HomePage() {
                 as="a"
                 className="text-white py-6 px-8 rounded-lg font-bold transition w-full sm:w-auto"
                 color="primary"
-                href="#Contact"
+                href="mailto:uduabraham12@gmail.com"
                 variant="solid"
               >
                 Contact Me
